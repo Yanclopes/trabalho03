@@ -1,0 +1,150 @@
+/* =========================================================================
+   Plataforma de Podcasts e Audios
+   Estilos compartilhados (Trabalho 03 - Cloud Computing)
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --ink: #0d0b1f;
+  --ink-soft: #1a1733;
+  --paper: #f4efe6;
+  --accent: #ff5c38;
+  --accent-2: #ffd23f;
+  --wave: #7b6cff;
+  --muted: #b8b0d6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Fraunces', Georgia, serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(123,108,255,0.25), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(255,92,56,0.18), transparent 45%),
+    var(--ink);
+  color: var(--paper);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* ---- Cabecalho / navegacao ---- */
+header {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.brand {
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+.brand span { color: var(--accent); }
+.nav-links a {
+  font-family: 'Space Mono', monospace;
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent-2); }
+
+/* ---- Hero ---- */
+.hero { padding: 90px 0 60px; }
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--wave);
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 16px 0 20px;
+}
+.hero h1 em { color: var(--accent); font-style: italic; }
+.hero p { max-width: 540px; color: var(--muted); font-size: 1.15rem; }
+
+.btn {
+  display: inline-block;
+  margin-top: 32px;
+  background: var(--accent);
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,92,56,0.4); }
+
+/* ---- Onda decorativa ---- */
+.waves { display: flex; gap: 4px; align-items: flex-end; height: 60px; margin: 50px 0; }
+.waves span {
+  flex: 1;
+  background: linear-gradient(var(--wave), var(--accent));
+  border-radius: 4px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.waves span:nth-child(odd) { animation-delay: 0.2s; }
+.waves span:nth-child(3n) { animation-delay: 0.4s; }
+@keyframes pulse { 0%,100% { height: 18%; } 50% { height: 100%; } }
+
+/* ---- Episodios ---- */
+.section-title {
+  font-family: 'Space Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  color: var(--accent-2);
+  margin: 60px 0 24px;
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card {
+  background: var(--ink-soft);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card .ep { font-family: 'Space Mono', monospace; color: var(--wave); font-size: 0.8rem; }
+.card h3 { font-size: 1.4rem; margin: 8px 0; }
+.card p { color: var(--muted); font-size: 0.95rem; }
+.card .dur { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--accent-2); margin-top: 14px; display: block; }
+
+/* ---- Conteudo de texto (pagina sobre) ---- */
+.prose { padding: 60px 0; max-width: 680px; }
+.prose h2 { font-size: 2.2rem; margin: 32px 0 14px; letter-spacing: -0.02em; }
+.prose p { color: var(--muted); margin-bottom: 16px; font-size: 1.08rem; }
+.prose ul { color: var(--muted); margin: 0 0 16px 22px; }
+.prose li { margin-bottom: 8px; }
+
+/* ---- Rodape ---- */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 0;
+  margin-top: 60px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+}

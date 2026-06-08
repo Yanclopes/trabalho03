@@ -1,0 +1,65 @@
+================================================================
+ RELATORIO OPERACIONAL - PLATAFORMA DE PODCASTS
+================================================================
+ Projeto : trabalho03-cloud-shell
+ Tema    : Plataforma de Podcasts e Audios
+ Aluno   : Nome do Aluno
+ Data    : 2026-06-08 22:37:54
+
+----------------------------------------------------------------
+>> ESPACO EM DISCO
+----------------------------------------------------------------
+Filesystem      Size  Used Avail Use% Mounted on
+overlay        1007G  3.1G  953G   1% /
+
+----------------------------------------------------------------
+>> USO DOS DIRETORIOS DA APLICACAO (/app/podcast)
+----------------------------------------------------------------
+4.0K	/app/podcast/audios
+4.0K	/app/podcast/backups
+4.0K	/app/podcast/capas
+8.0K	/app/podcast/dados
+8.0K	/app/podcast/episodios
+4.0K	/app/podcast/logs
+4.0K	/app/podcast/publicacao
+8.0K	/app/podcast/transcricoes
+
+----------------------------------------------------------------
+>> STATUS DO APACHE
+----------------------------------------------------------------
+[OK] Apache em execucao.
+Server version: Apache/2.4.52 (Ubuntu)
+
+----------------------------------------------------------------
+>> ULTIMOS BACKUPS (backups/)
+----------------------------------------------------------------
+-rwxrwxrwx 1 1000 podcast_ops 395 Jun  8 22:31 /opt/trabalho03-cloud-shell/backups/backup_podcast_2026-06-08_22-31.tar.gz
+
+----------------------------------------------------------------
+>> ULTIMOS LOGS (logs/)
+----------------------------------------------------------------
+-rwxrwxrwx 1 1000 podcast_ops  427 Jun  8 22:37 /opt/trabalho03-cloud-shell/logs/08_usuarios_permissoes.log
+-rwxrwxrwx 1 1000 podcast_ops  536 Jun  8 22:37 /opt/trabalho03-cloud-shell/logs/07_monitoramento.log
+-rwxrwxrwx 1 1000 podcast_ops  308 Jun  8 22:32 /opt/trabalho03-cloud-shell/logs/05_deploy.log
+-rwxrwxrwx 1 1000 podcast_ops  272 Jun  8 22:31 /opt/trabalho03-cloud-shell/logs/04_backup.log
+-rwxrwxrwx 1 1000 podcast_ops  683 Jun  8 22:31 /opt/trabalho03-cloud-shell/logs/03_estrutura.log
+-rwxrwxrwx 1 1000 podcast_ops 1.6K Jun  8 22:30 /opt/trabalho03-cloud-shell/logs/02_apache.log
+-rwxrwxrwx 1 1000 podcast_ops 7.2K Jun  8 22:30 /opt/trabalho03-cloud-shell/logs/01_update.log
+
+----------------------------------------------------------------
+>> ARQUIVOS PUBLICADOS (/var/www/html)
+----------------------------------------------------------------
+total 12K
+drwxr-xr-x 2 root root 4.0K Jun  8 22:32 assets
+-rwxr-xr-x 1 root root 2.3K Jun  8 22:32 index.html
+-rwxr-xr-x 1 root root 2.1K Jun  8 22:32 sobre.html
+
+----------------------------------------------------------------
+>> USUARIOS E PERMISSOES PRINCIPAIS
+----------------------------------------------------------------
+Grupo podcast_ops:
+podcast_ops:x:1000:
+Usuario audio_user:
+uid=999(audio_user) gid=1000(podcast_ops) groups=1000(podcast_ops)
+Permissoes de /app/podcast/audios:
+drwxr-x--- 2 audio_user podcast_ops 4096 Jun  8 22:31 /app/podcast/audios

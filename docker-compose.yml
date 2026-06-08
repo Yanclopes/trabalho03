@@ -1,0 +1,25 @@
+# =============================================================================
+# Trabalho 03 - Plataforma de Podcasts e Audios
+# docker-compose.yml
+# =============================================================================
+services:
+  app:
+    build: .
+    image: trabalho03:latest
+    container_name: trabalho03-linux
+    ports:
+      # Acesso ao site pelo navegador em http://localhost:8080
+      - "8080:80"
+    volumes:
+      # Volume persistente nomeado para os dados da aplicacao (/app/podcast)
+      - podcast_data:/app
+      # Bind mounts para acompanhar saidas no host durante o desenvolvimento
+      - ./scripts:/opt/trabalho03-cloud-shell/scripts
+      - ./source:/opt/trabalho03-cloud-shell/source
+      - ./backups:/opt/trabalho03-cloud-shell/backups
+      - ./logs:/opt/trabalho03-cloud-shell/logs
+    restart: unless-stopped
+
+# Volume persistente: mantem os dados de /app/podcast mesmo apos recriar o container
+volumes:
+  podcast_data:

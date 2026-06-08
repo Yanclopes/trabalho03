@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <div class="brand">Pod<span>Cloud</span> 🎙</div>
+        <div class="nav-links">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="prose">
+      <p class="tag">// Sobre o projeto</p>
+      <h2>O que é</h2>
+      <p>é o cenário escolhido para o Trabalho 03 de Cloud Computing:
+         uma plataforma de podcasts e áudios que precisa de um ambiente Linux
+         confiável, automatizado e fácil de operar. Toda a infraestrutura roda
+         dentro de um container Docker baseado em Ubuntu, com o Apache servindo
+         este site estático.</p>
+
+      <h2>Como o ambiente é operado</h2>
+      <p>Em vez de configurar tudo manualmente, a operação é feita por um
+         conjunto de scripts Shell que cobrem as rotinas típicas de um time de
+         DevOps:</p>
+      <ul>
+        <li>Atualização do sistema e instalação do Apache (+ ffmpeg para áudio);</li>
+        <li>Criação da estrutura de pastas de episódios, áudios e transcrições;</li>
+        <li>Backup automatizado em <code>.tar.gz</code> com data e hora;</li>
+        <li>Deploy do site e publicação em <code>/var/www/html</code>;</li>
+        <li>Gerenciamento de processos e monitoramento de CPU, memória e disco;</li>
+        <li>Controle de usuários, grupos e permissões;</li>
+        <li>Geração de relatório operacional consolidado.</li>
+      </ul>
+
+      <h2>Tecnologias</h2>
+      <p>Ubuntu Server, Docker e Docker Compose, Apache HTTP Server, Bash/Shell
+         Script e ffmpeg para o processamento de áudio característico do tema.</p>
+    </section>
+
+    <footer>
+      © 2026 · Plataforma de Podcasts e Áudios · Unidavi — Sistemas de Informação
+    </footer>
+  </div>
+</body>
+</html>

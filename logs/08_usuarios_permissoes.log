@@ -1,0 +1,6 @@
+[2026-06-08 22:37:27] [OK] Grupo 'podcast_ops' criado.
+[2026-06-08 22:37:27] [OK] Usuario de sistema 'audio_user' criado no grupo 'podcast_ops'.
+[2026-06-08 22:37:27] Aplicando dono (chown) audio_user:podcast_ops em /app/podcast/audios...
+[2026-06-08 22:37:27] [OK] chown aplicado.
+[2026-06-08 22:37:27] Aplicando permissoes 750 em /app/podcast/audios (sem 777, por seguranca)...
+[2026-06-08 22:37:27] [OK] chmod 750 aplicado.

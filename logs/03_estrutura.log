@@ -1,0 +1,11 @@
+[2026-06-08 22:31:07] Nenhuma estrutura anterior encontrada. Seguindo com a criacao.
+[2026-06-08 22:31:07] Criando estrutura de diretorios da plataforma de podcasts...
+[2026-06-08 22:31:07]   -> criado: /app/podcast/episodios
+[2026-06-08 22:31:07]   -> criado: /app/podcast/audios
+[2026-06-08 22:31:07]   -> criado: /app/podcast/transcricoes
+[2026-06-08 22:31:07]   -> criado: /app/podcast/capas
+[2026-06-08 22:31:07]   -> criado: /app/podcast/dados
+[2026-06-08 22:31:07]   -> criado: /app/podcast/publicacao
+[2026-06-08 22:31:07]   -> criado: /app/podcast/logs
+[2026-06-08 22:31:07]   -> criado: /app/podcast/backups
+[2026-06-08 22:31:08] [OK] Arquivos iniciais de exemplo criados.

@@ -1,0 +1,10 @@
+[2026-06-08 22:33:28] Coleta de monitoramento iniciada em 2026-06-08 22:33:28
+[2026-06-08 22:33:29] [OK] CPU em 0%
+[2026-06-08 22:33:29] [OK] Memoria em 11%
+[2026-06-08 22:33:29] [OK] Disco em 1%
+[2026-06-08 22:33:29] [OK] Apache em execucao - PodCloud no ar.
+[2026-06-08 22:37:00] Coleta de monitoramento iniciada em 2026-06-08 22:37:00
+[2026-06-08 22:37:00] [ALERTA] Uso de CPU acima de 80% (100%)
+[2026-06-08 22:37:00] [OK] Memoria em 11%
+[2026-06-08 22:37:00] [OK] Disco em 1%
+[2026-06-08 22:37:00] [OK] Apache em execucao - no ar.
