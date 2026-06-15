@@ -36,6 +36,10 @@ realizar_backup() {
     # -C entra na pasta pai para nao gravar o caminho absoluto no tar
     if tar -czf "$DESTINO/$ARQ_BACKUP" -C "$(dirname "$ORIGEM")" "$(basename "$ORIGEM")" 2>>"$ARQ_LOG"; then
         registrar_log "[OK] Backup gerado: $ARQ_BACKUP"
+        # Registra no log o tamanho do backup gerado (obtido com du -sh)
+        local tam_backup
+        tam_backup="$(du -sh "$DESTINO/$ARQ_BACKUP" | cut -f1)"
+        registrar_log "Tamanho do backup: $tam_backup"
     else
         registrar_log "[FALHA] Erro ao gerar o backup."
         return 1
